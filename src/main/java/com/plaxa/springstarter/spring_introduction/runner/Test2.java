@@ -1,5 +1,6 @@
-package com.plaxa.springstarter.spring_introduction;
+package com.plaxa.springstarter.spring_introduction.runner;
 
+import com.plaxa.springstarter.spring_introduction.entity.Pet;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Test2 {

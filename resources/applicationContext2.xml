@@ -7,18 +7,12 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:property-placeholder location="classpath:application.properties"/>
 
     <bean id="myPet"
-          class="com.plaxa.springstarter.spring_introduction.entity.Dog">
-    </bean>
-
-    <bean id="myPerson"
-          class="com.plaxa.springstarter.spring_introduction.entity.Person">
-<!--        <constructor-arg ref="myPet"/>-->
-        <property name="pet" ref="myPet"/>
-        <property name="surname" value="${person.surname}"/>
-        <property name="age" value="${person.age}"/>
+          class="com.plaxa.springstarter.spring_introduction.entity.Dog"
+          init-method="init"
+          destroy-method="destroy"
+          scope="prototype">
     </bean>
 
 </beans>
